@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain</title>
+</head>
+
+<body>
+
+    CHAIN LENGTH = {{ chain_length }}
+    <br><br>
+    NODE COUNT = {{ node_count }}
+    <br><br>
+
+    CHAIN : -<br><br>
+
+    {% for block in chain %}
+    Index : {{ block['index'] }} <br>
+    Previous Hash : {{ block['prev_hash'] }} <br>
+    Timestamp : {{ block['timestamp'] }} <br>
+    Transaction : {{ block['transaction'] }} <br>
+    POW : {{ block['proof'] }} <br><br>
+    {% endfor %}
+
+</body>
+
+</html>
